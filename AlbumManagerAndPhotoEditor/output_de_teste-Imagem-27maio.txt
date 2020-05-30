@@ -1,0 +1,174 @@
+
+--- testando o construtor ---
+
+
+--- testando alguns setters e getters ---
+
+Urso na Natureza.
+Podíamos fazer férias aqui.
+If it walks like a duck and it quacks...
+
+--- testando __mul__ ---
+
+4
+urso_rep4
+urso_rep4
+(2200, 358)
+2200
+358
+2020-05-27 23:34:27.049169
+['animais', 'replicada']
+Urso na Natureza.
+A imagem descrita acima resulta de replicar urso 4 vezes.
+
+--- testando __rmul__ ---
+
+5
+urso_rep3
+urso_rep3
+(1650, 358)
+1650
+358
+2020-05-27 23:34:27.079084
+['animais', 'replicada']
+Urso na Natureza.
+A imagem descrita acima resulta de replicar urso 3 vezes.
+
+--- testando __invert__ ---
+
+6
+urso_negativo
+urso_negativo
+(550, 358)
+550
+358
+2020-05-27 23:34:27.119153
+['animais', 'negativo']
+Urso na Natureza.
+A imagem descrita acima foi sujeita a inversão.
+
+--- testando __invert__ 2 vezes ---
+
+8
+urso_negativo_negativo
+urso_negativo_negativo
+(550, 358)
+550
+358
+2020-05-27 23:34:27.159301
+['animais', 'negativo', 'negativo']
+Urso na Natureza.
+A imagem descrita acima foi sujeita a inversão.
+A imagem descrita acima foi sujeita a inversão.
+
+--- testando __rmul__ (portanto __mul__), __add_ e __invert__ ---
+
+12
+urso+costa_rep2+urso_negativo
+urso+costa_rep2+urso_negativo
+(2722, 358)
+2722
+358
+2020-05-27 23:34:27.219223
+['animais', 'férias', 'paisagens', 'replicada', 'negativo']
+Urso na Natureza.
+Podíamos fazer férias aqui.
+A imagem descrita acima resulta de replicar urso+costa 2 vezes.
+Urso na Natureza.
+A imagem descrita acima foi sujeita a inversão.
+
+--- testando __and__ com dois operandos Imagem ---
+
+13
+urso_mix_costa
+urso_mix_costa
+(550, 358)
+550
+358
+2020-05-27 23:34:27.279020
+['animais', 'férias', 'paisagens', 'mistura']
+Urso na Natureza.
+Podíamos fazer férias aqui.
+A imagem descrita acima resulta de uma mistura.
+
+--- testando str() e repr() da classe Imagem ---
+
+0001_urso.jpg
+0001, urso.jpg, 550x358, 2020-05-27 11:32:33.638360, format: JPEG (ISO 10918), mode: RGB
+0012_urso+costa_rep2+urso_negativo
+0012, urso+costa_rep2+urso_negativo, 2722x358, 2020-05-27 23:34:27.219223, format: None, mode: RGB
+
+--- testando __and__ com Imagem & Filtro ---
+
+
+--- para isso, cria-se um filtro EDGE_ENHANCE_MORE ---
+
+15
+urso_comFiltro_EDGE_ENHANCE_MORE+urso
+urso_comFiltro_EDGE_ENHANCE_MORE+urso
+(1100, 358)
+1100
+358
+2020-05-27 23:34:27.349190
+['animais', 'filtrada']
+Urso na Natureza.
+A imagem descrita acima foi filtrada.
+Urso na Natureza.
+
+--- testando __and__ com Filtro & Imagem, i.e., __rand__ ---
+
+16
+urso_comFiltro_EDGE_ENHANCE_MORE
+urso_comFiltro_EDGE_ENHANCE_MORE
+(550, 358)
+550
+358
+2020-05-27 23:34:27.389132
+['animais', 'filtrada']
+Urso na Natureza.
+A imagem descrita acima foi filtrada.
+
+--- testando __matmul__ com Imagem & float ---
+
+17
+urso_redim
+urso_redim
+(770, 501)
+770
+501
+2020-05-27 23:34:27.429091
+['animais', 'redimensionada']
+Urso na Natureza.
+A imagem descrita acima foi redimensionada.
+
+--- testando __matmul__ com float @ Imagem, i.e., __rmatmul__ ---
+
+18
+urso_redim
+urso_redim
+(495, 322)
+495
+322
+2020-05-27 23:34:27.468890
+['animais', 'redimensionada']
+Urso na Natureza.
+A imagem descrita acima foi redimensionada.
+
+--- mais um teste com o pato: pato & costa ---
+
+
+--- testando __mul__ de novo (aplicado 2 vezes) ---
+
+21
+pato_mix_costa_rep2_rep3
+pato_mix_costa_rep2_rep3
+(2280, 280)
+2280
+280
+2020-05-27 23:34:27.519149
+['genérica', 'animais', 'férias', 'paisagens', 'mistura', 'replicada', 'replicada']
+If it walks like a duck and it quacks...
+Podíamos fazer férias aqui.
+A imagem descrita acima resulta de uma mistura.
+A imagem descrita acima resulta de replicar pato_mix_costa 2 vezes.
+A imagem descrita acima resulta de replicar pato_mix_costa_rep2 3 vezes.

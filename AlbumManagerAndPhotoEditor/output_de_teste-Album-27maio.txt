@@ -1,0 +1,114 @@
+
+--- criando algumas Imagens para testes ---
+
+urso.jpg
+urso.jpg
+costa.jpg
+pato.jpg
+urso+costa
+
+--- testando o construtor de Album e 5 getters básicos ---
+
+Meu Álbum de 27 de Maio
+[]
+
+--- testando __setitem__ (operação proibida) ---
+
+Uma operação falhou: Operação proibida
+
+--- testando carregarImagemPreProcessada e 2 getters ---
+
+['0001_urso.jpg', '0002_urso.jpg', '0005_urso+costa', '0003_costa.jpg', '0004_pato.jpg']
+5
+
+--- testando __getitem__ ---
+
+0002_urso.jpg
+
+--- testando __delitem__ ---
+
+['0001_urso.jpg', '0005_urso+costa', '0003_costa.jpg', '0004_pato.jpg']
+4
+
+--- testando carregarImagemDeFicheiro ---
+
+--- validar = False, imagem nova ---
+['0001_urso.jpg', '0005_urso+costa', '0003_costa.jpg', '0004_pato.jpg', '0006_rallyPro.jpg']
+5
+
+--- validar = True, imagem pré-carregada ---
+['0001_urso.jpg', '0005_urso+costa', '0003_costa.jpg', '0004_pato.jpg', '0006_rallyPro.jpg']
+5
+
+--- validar = False, imagem pré-carregada ---
+['0001_urso.jpg', '0005_urso+costa', '0003_costa.jpg', '0004_pato.jpg', '0006_rallyPro.jpg', '0007_pato.jpg']
+6
+
+--- testando dump ---
+
+
+--- testando @staticmethod recriarAlbum ---
+
+['0001_urso.jpg', '0005_urso+costa', '0003_costa.jpg', '0004_pato.jpg', '0006_rallyPro.jpg', '0007_pato.jpg']
+6
+
+--- testando o construtor de AlbumPlus e 6 getters básicos ---
+
+
+--- a partir de um Album ---
+Meu Álbum de 27 de Maio -cópia
+['0001_urso.jpg', '0005_urso+costa', '0003_costa.jpg', '0004_pato.jpg', '0006_rallyPro.jpg', '0007_pato.jpg']
+6
+Album Meu Álbum de 27 de Maio -cópia
+Album Meu Álbum de 27 de Maio -cópia com 6 imagens 
+
+--- testando setNome sobre meuAlbumPlus2 ---
+
+Meu Álbum Plus Dois de 27 de Maio
+
+--- testando o tipo de meuAlbumPlus2 ---
+
+<class 'imagem.AlbumPlus'>
+True True
+
+--- testando listarImagens sobre meuAlbumPlus2 ---
+
+['0001_urso.jpg', '0005_urso+costa', '0003_costa.jpg', '0004_pato.jpg', '0006_rallyPro.jpg', '0007_pato.jpg']
+
+--- testando pesquisarImagens ---
+
+
+--- pesquisa por nome exacto ---
+
+[0003, costa.jpg, 1204x804, 2014-10-25 09:41:39, format: MPO (CIPA DC-007), mode: RGB]
+['0003_costa.jpg']
+[0001, urso.jpg, 550x358, 2020-05-27 11:32:33.638360, format: JPEG (ISO 10918), mode: RGB]
+['0001_urso.jpg']
+
+--- pesquisa por nome com tolerância ---
+
+[]
+['0001_urso.jpg']
+
+--- pesquisa por intervalo de dataHora ---
+
+todas (sem qualquer pesquisa):
+[0001, urso.jpg, 550x358, 2020-05-27 11:32:33.638360, format: JPEG (ISO 10918), mode: RGB, 0005, urso+costa, 1086x358, 2020-05-27 23:31:15.559996, format: None, mode: RGB, 0003, costa.jpg, 1204x804, 2014-10-25 09:41:39, format: MPO (CIPA DC-007), mode: RGB, 0004, pato.jpg, 380x280, 2004-09-01 13:04:53, format: JPEG (ISO 10918), mode: RGB, 0006, rallyPro.jpg, 1108x739, 2020-05-27 12:28:41.539345, format: JPEG (ISO 10918), mode: RGB, 0007, pato.jpg, 380x280, 2004-09-01 13:04:53, format: JPEG (ISO 10918), mode: RGB]
+
+apenas em Outubro ou Novembro de 2014:
+['0003_costa.jpg']
+
+--- pesquisa por etiquetas ---
+
+['0001_urso.jpg', '0005_urso+costa', '0004_pato.jpg']
+['0005_urso+costa', '0003_costa.jpg']
+['0006_rallyPro.jpg', '0007_pato.jpg']
+
+--- pesquisa por intervalo de dataHora, e por etiquetas ---
+
+['0005_urso+costa', '0003_costa.jpg', '0006_rallyPro.jpg']
+
+--- pesquisa por nome com tolerância, e por etiquetas ---
+
+['0001_urso.jpg']
+[]

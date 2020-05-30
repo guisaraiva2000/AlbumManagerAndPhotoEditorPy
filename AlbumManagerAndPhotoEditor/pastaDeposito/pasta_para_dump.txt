@@ -1,0 +1,1 @@
+Nesta pasta aparecerá o ficheiro pickle que corresponde ao dump de um Album.
